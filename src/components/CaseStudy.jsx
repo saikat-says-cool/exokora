@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
 import { ArrowLeft, TrendUp, UserCheck, Strategy, Microscope, ChartBar } from '@phosphor-icons/react';
 
 const CaseStudy = () => {
@@ -6,6 +7,8 @@ const CaseStudy = () => {
 
     return (
         <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto animate-fade-in relative">
+            <SEO title="Case Study" description="See how Vanguard CFOs added $1.4M to their pipeline in 6 months using Exokora's private outbound infrastructure." path="/casestudy" />
+
             <div className="flex flex-col md:flex-row justify-between items-end border-b border-ink-primary/10 pb-12 mb-16 gap-8">
                 <div>
                     <span className="font-tech text-sm uppercase tracking-[0.3em] text-accent-blue mb-4 block">Client Results</span>

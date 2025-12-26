@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
 import { Shield, Terminal, WifiHigh, Cpu, Target, Funnel } from '@phosphor-icons/react';
 
 const Blueprint = () => {
@@ -45,6 +46,8 @@ const Blueprint = () => {
 
     return (
         <div className="min-h-screen pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-12 animate-fade-in relative">
+            <SEO title="Our Process" description="How we build your private outbound infrastructure. From system setup to continuous optimization." path="/blueprint" />
+
             <div className="border-b border-ink-primary/10 pb-12 mb-16">
                 <span className="font-tech text-sm uppercase tracking-[0.3em] text-accent-blue mb-4 block">The Process</span>
                 <h1 className="text-5xl md:text-8xl font-hand font-bold italic text-ink-primary">How We Work.</h1>

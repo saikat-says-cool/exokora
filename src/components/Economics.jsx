@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
 import { Package, Lightning, ShieldCheck, ArrowsClockwise } from '@phosphor-icons/react';
 
 const Economics = () => {
@@ -23,6 +24,8 @@ const Economics = () => {
 
     return (
         <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto animate-fade-in relative">
+            <SEO title="Pricing" description="Simple, transparent pricing. A one-time setup fee to build your infrastructure, and a monthly retainer to run it." path="/economics" />
+
             <div className="border-b border-ink-primary/10 pb-12 mb-16">
                 <span className="font-tech text-sm uppercase tracking-[0.3em] text-accent-blue mb-4 block">How We Work Together</span>
                 <h1 className="text-5xl md:text-8xl font-hand font-bold italic text-ink-primary">Two Simple Phases.</h1>

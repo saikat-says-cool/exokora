@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
 import {
     Pulse,
     Cpu,
@@ -91,6 +92,8 @@ const Architecture = () => {
 
     return (
         <div className="min-h-screen pt-32 px-6 md:px-12 max-w-7xl mx-auto animate-fade-in pb-20">
+            <SEO title="How It Works" description="Our 5-step operational framework for generating qualified leads. Signal detection, verification, and personalized outreach." path="/architecture" />
+
             <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
                 <div className="max-w-3xl">
                     <span className="font-tech text-sm uppercase tracking-[0.3em] text-accent-blue mb-4 block">How It Works</span>

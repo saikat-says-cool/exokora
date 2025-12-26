@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
 import { Calendar } from '@phosphor-icons/react';
 
 const Apply = () => {
@@ -6,6 +7,8 @@ const Apply = () => {
 
     return (
         <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 bg-paper animate-fade-in relative">
+            <SEO title="Book a Briefing" description="Schedule a private briefing to see how Exokora can build your outbound infrastructure." path="/apply" />
+
             <div className="max-w-5xl mx-auto">
                 <div className="mb-16 text-center">
                     <span className="font-tech text-sm uppercase tracking-[0.3em] text-accent-blue mb-4 block">Let's Talk</span>

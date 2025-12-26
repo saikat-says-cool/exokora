@@ -1,10 +1,13 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
 
 const Manifesto = () => {
     const navigate = useNavigate();
 
     return (
         <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto animate-fade-in relative">
+            <SEO title="Manifesto" description="We believe in quality over quantity. Reputation over risky tactics. And real conversations over spam." path="/manifesto" />
+
             <div className="border-b border-ink-primary/10 pb-12 mb-16">
                 <span className="font-tech text-sm uppercase tracking-[0.3em] text-accent-blue mb-4 block">What We Believe</span>
                 <h1 className="text-5xl md:text-8xl font-hand font-bold italic text-ink-primary">Our Philosophy.</h1>

@@ -1,10 +1,13 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
 
 const Hero = () => {
     const navigate = useNavigate();
 
     return (
         <div className="min-h-screen pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col justify-center animate-fade-in">
+            <SEO title="Home" description="Get more high-value clients for your fractional executive firm without lifting a finger. Done-for-you outbound infrastructure." />
+
             <div className="flex flex-col mb-8">
                 <span className="font-tech text-sm uppercase tracking-[0.3em] text-accent-blue mb-4">For Fractional Executives</span>
                 <div className="h-[1px] w-20 bg-ink-primary/20"></div>
