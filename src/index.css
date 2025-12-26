@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-paper: #F5F4F0;
+    --ink-primary: #1A1A1A;
+    --ink-secondary: #4A4A4A;
+    --accent-blue: #1B365D;
+    --border-sketch: #1A1A1A;
+  }
+
+  body {
+    background-color: var(--bg-paper);
+    color: var(--ink-primary);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    /* Artificialyze Grid */
+    background-image:
+      linear-gradient(90deg, rgba(26, 26, 26, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(26, 26, 26, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+
+  ::selection {
+    background: var(--ink-primary);
+    color: var(--bg-paper);
+  }
+}
+
+@layer components {
+  .sketch-box {
+    border: 1px solid var(--border-sketch);
+    box-shadow: 4px 4px 0px rgba(26, 26, 26, 0.1);
+    transition: all 0.2s ease;
+    background: white;
+  }
+
+  .sketch-box:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(26, 26, 26, 0.15);
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-ink-primary text-white font-tech text-xs uppercase tracking-widest transition-all hover:bg-opacity-90 active:transform active:scale-95;
+  }
+
+  .highlight-scribble {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight-scribble::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(27, 54, 93, 0.1);
+    z-index: -1;
+    transform: skewX(-15deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar for the technical feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ink-primary);
+}
